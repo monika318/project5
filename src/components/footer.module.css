@@ -1,0 +1,115 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.innerFooter {
+  width: 80%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(217 223 215);
+}
+
+.innerFooter .logo a {
+  font-size: 30px;
+  color: #03383c;
+  text-decoration: none;
+  font-family: "Cagliostro", sans-serif;
+}
+.SocialIcons {
+  font-size: 20px;
+  display: flex;
+  gap: 25px;
+  margin: 10px 0px 25px 0px;
+}
+.SocialIcons a {
+  color: #03383c;
+}
+.SocialIcons a:hover {
+  color: #7e8865;
+}
+.location {
+  display: flex;
+  text-align: center;
+}
+.location p {
+  color: #5b7d7c;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+}
+.location p a {
+  text-decoration: none;
+  color: #5b7d7c;
+}
+.location p:nth-child(2) {
+  border-right: 2px solid black;
+  border-left: 2px solid black;
+  padding: 0px 10px;
+  color: #5b7d7c;
+  /* margin: 0px 10px; */
+}
+.location p:nth-child(1) {
+  padding: 0px 10px;
+}
+.location p:nth-child(3) {
+  padding: 0px 10px;
+}
+.location p:hover,
+.location p a:hover {
+  color: #7e8865;
+}
+.copyright {
+  color: #5b7d7c;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+}
+/* font-family: 'Barlow', sans-serif;
+font-family: 'DM Sans', sans-serif;
+font-family: 'Inter', sans-serif;
+font-family: 'Lato', sans-serif;
+font-family: 'Merriweather', serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Poppins', sans-serif; */
+
+@media only screen and (max-width: 1050px) {
+  .location {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .location p:nth-child(2) {
+    border-right: 2px solid black;
+    border-left: none;
+  }
+}
+@media only screen and (max-width: 580px) {
+  .innerFooter {
+    height: 300px;
+  }
+  .location {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .location p,
+  .copyright p {
+    font-size: 12px;
+  }
+  .location p:nth-child(2) {
+    border-right: 2px solid black;
+    border-left: none;
+  }
+}
+@media only screen and (max-width: 345px) {
+  .location p:nth-child(2) {
+    border-right: none;
+    border-left: none;
+  }
+  .location {
+    text-align: center;
+  }
+}
