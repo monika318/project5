@@ -1,0 +1,101 @@
+.TestimonialsOuter {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.TopSection {
+  /* background-image: url("../../images/background3.png"); */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: -80px;
+  z-index: 2;
+}
+.FloatingSection {
+  height: 45vh;
+  width: 80%;
+  background-image: url("../../images/background4.jpg");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.FloatingSection .text {
+  margin-left: 1em;
+}
+.FloatingSection h3 {
+  font-size: 35px;
+  margin-bottom: 1em;
+}
+
+.FloatingSection button {
+  background-color: #7e8865;
+  color: white;
+  border: none;
+  padding: 15px 35px;
+  font-size: 20px;
+}
+
+.BottomDiv {
+  background-image: url("../../images/image5.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: bisque;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 9em;
+}
+.BottomDiv h1 {
+  color: white;
+  z-index: 2;
+  font-size: 50px;
+  margin-bottom: 0.5em;
+}
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #03383caf;
+  /* background-color: #7e88658d; */
+  /* overflow: hidden; */
+  height: 100%;
+  z-index: 1;
+}
+
+/* swiper */
+.swiper {
+  width: 70%;
+  height: 100%;
+  color: white;
+}
+
+.swiperSlide {
+  text-align: center;
+  font-size: 18px;
+  /* Center slide text vertically */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.swiperSlide img {
+  display: block;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 1.5em;
+}
+.swiperSlide p {
+  margin: 1.5em;
+  font-size: 20px;
+}
+/* swiper */

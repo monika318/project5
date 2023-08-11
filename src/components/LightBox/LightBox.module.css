@@ -1,0 +1,34 @@
+.ImageDiv {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.ImageDiv img {
+  height: 500px;
+  width: 100%;
+  object-fit: contain;
+}
+.smallImages {
+  display: flex;
+  gap: 10px;
+}
+.smallImages img {
+  height: 200px;
+  width: 100%;
+  object-fit: contain;
+}
+.smallimg {
+  opacity: 0.6;
+}
+.smallImages img:hover {
+  opacity: 1;
+  border: 1px solid black;
+}
+.DescriptionDiv {
+  width: 50%;
+}
+.active {
+  opacity: 1;
+  border: 1px solid black;
+}

@@ -1,0 +1,23 @@
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #03383c;
+  padding: 1.5em;
+  margin-bottom: 3em;
+}
+.banner a {
+  text-decoration: none;
+  color: #03383c;
+  font-size: 20px;
+}
+.banner a:hover {
+  color: #7e8865;
+}
+.headerText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}

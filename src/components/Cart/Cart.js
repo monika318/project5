@@ -9,9 +9,14 @@ const Cart = (props) => {
     const [value, setValue] = useState(0);
     const [selectedProducts, setSelectedProducts] = useState([]);
     const [isCartEmpty, setisCartEmpty] = useState(true);
-
     const price = 10
 
+    // useEffect(() => {
+    //     const selected = products.filter(product => storedKeys.includes(product.id));
+    //     setSelectedProducts(selected);
+    //     // Check if the existingCartKeys array is empty
+    //     setisCartEmpty(selected.length === 0)
+    // }, []);
     useEffect(() => {
         const storedKeysString = localStorage.getItem('cartKey');
         const storedKeys = storedKeysString ? JSON.parse(storedKeysString) : [];
@@ -19,7 +24,7 @@ const Cart = (props) => {
         setSelectedProducts(selected);
         // Check if the existingCartKeys array is empty
         setisCartEmpty(selected.length === 0)
-    }, [props, selectedProducts]);
+    }, [selectedProducts, props]);
 
     const handleNumMinus = () => {
         if (value === 0) {

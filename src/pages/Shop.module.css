@@ -1,0 +1,59 @@
+.Shop {
+  margin-top: 7em;
+  width: 100%;
+  margin-bottom: 2em;
+}
+.OuterShop {
+  display: flex;
+  font-size: 23px;
+}
+.LeftSection {
+  width: 30%;
+}
+
+/* Right Section */
+.RightSection {
+  width: 70%;
+  padding: 0 1.5em;
+}
+.SortDiv {
+  border: 1px solid black;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Category select {
+  padding: 5px 5px;
+}
+.Views {
+  display: grid;
+  border: 1px solid black;
+  grid-template-columns: 1fr 1fr; /* One row, two columns */
+  border-collapse: collapse;
+}
+.GridView,
+.ListView {
+  display: flex;
+  padding: 5px 10px;
+  justify-content: center;
+  align-items: center;
+}
+.GridView {
+  border-right: 1px solid black;
+}
+.active {
+  background-color: #7e8865;
+  color: white;
+}
+.DisplayProduct {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.EachProduct {
+  width: 30%;
+}
+.ListProduct {
+}
