@@ -66,6 +66,7 @@ const Cart = (props) => {
                 <button onClick={handleCartClose} >Continue Shopping</button>
             </div>
             {selectedProducts.map((item) => {
+                const numbers = 0;
                 return (<>
                     <div className={styles.Card}>
                         <div className={styles.CardCloseButton} onClick={() => handleProductCancel(item.id)}>
@@ -78,11 +79,11 @@ const Cart = (props) => {
                             <h3>{item.name}</h3>
                             <h6>Color: Blue</h6>
                             <h5>${item.price}</h5>
-
                             <Spinner
-                                value={value}
-                                onNumMinus={handleNumMinus}
-                                onNumAdd={handleNumAdd}
+                                // value={value}
+                                // onNumMinus={handleNumMinus}
+                                // onNumAdd={handleNumAdd}
+                                numbers={numbers}
                             />
                         </div>
                     </div>

@@ -8,9 +8,6 @@ const Card = (props) => {
     const { item, setShowCart } = props;
     const navigate = useNavigate();
 
-
-
-
     const handleAddToCart = (id) => {
         // console.log(JSON.stringify(id))
         setShowCart(true);

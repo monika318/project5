@@ -1,12 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import * as  AiIcons from 'react-icons/ai'
 import { useNavigate } from 'react-router-dom';
-import styles from './CardList.module.css'
+import styles from './CardList.module.css';
 
 
 const CardList = (props) => {
     const { item, setShowCart } = props;
     const navigate = useNavigate();
+
 
     const handleAddToCart = (id) => {
         // console.log(JSON.stringify(id))
@@ -35,7 +36,8 @@ const CardList = (props) => {
         navigate(`/product/${id}`);
     }
     return (
-        <>
+        <div>
+
             <div className={styles.card} >
                 <div className={styles.cardImage}>
                     <img src={item.img} alt="product1" />
@@ -68,7 +70,7 @@ const CardList = (props) => {
                     {/* {props.description && <p style={{ width: '80%', textAlign: 'center' }}>{item.description}</p>} */}
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 

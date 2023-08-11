@@ -20,15 +20,38 @@ const Product = () => {
     const { id } = useParams();
 
     const productWithId = ProductItem.find(product => product.id === id);
-    console.log(productWithId)
+
+    const handleAddToCart = (id) => {
+        // console.log(JSON.stringify(id))
+        setShowCart(true);
+        const existingCartKeysString = localStorage.getItem('cartKey');
+        let existingCartKeys = [];
+
+        if (existingCartKeysString) {
+            try {
+                existingCartKeys = JSON.parse(existingCartKeysString);
+                if (!Array.isArray(existingCartKeys)) {
+                    existingCartKeys = [];
+                }
+            } catch (error) {
+                console.error('Error parsing existingCartKeys:', error);
+                existingCartKeys = [];
+            }
+        }
+        // Add the new key to the array
+        existingCartKeys.push(id);
+        // Store the updated array of keys in local storage
+        localStorage.setItem('cartKey', JSON.stringify(existingCartKeys));
+    }
     return (
         <>
             <div className={styles.ProductOuter}>
-                {/* <div className={showCart ? `${styles.model} ${styles.open}` : styles.model}>
+
+                <div className={showCart ? `${styles.model} ${styles.open}` : styles.model}>
                     <div className={styles.SideCart}>
                         <Cart setShowCart={setShowCart} />
                     </div>
-                </div> */}
+                </div>
                 <TopBanner Pagename='Product' PageLink={`/product/${id}`} />
 
                 <div className={styles.SoloProduct}>
@@ -40,7 +63,7 @@ const Product = () => {
                             <p><span>Avalability:</span> </p>
                             <p><span>Quantity:</span> </p>
                             <p><span>Size: {productWithId.size}</span> </p>
-                            <button>Add to Cart</button>
+                            <button onClick={() => handleAddToCart(productWithId.id)}>Add to Cart</button>
                             <button>Buy it now</button>
                             <button>Add to wishlist</button>
                         </div>

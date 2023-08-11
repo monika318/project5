@@ -11,6 +11,14 @@ const Footer = () => {
     const year = date.getFullYear();
     return (
         <div className={styles.footer}>
+            <div className={styles.FooterHeader}>
+                <h6>Store Map</h6>
+                <h6>Policy</h6>
+                <h6>Gallery</h6>
+                <h6>Cancellation</h6>
+                <h6>Terms & Conditions</h6>
+                <h6>Portfolio</h6>
+            </div>
             <div className={styles.innerFooter}>
                 <div className={styles.logo}>
                     {/* <NavLink to="/" ><img src={Logo} alt="logo" /></NavLink> */}

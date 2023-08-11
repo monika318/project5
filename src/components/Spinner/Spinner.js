@@ -1,19 +1,21 @@
 import React, { useState } from 'react'
 import styles from './Spinner.module.css'
 
-const Spinner = ({ value, onNumMinus, onNumAdd }) => {
-    // const [value, setValue] = useState(0);
+const Spinner = (numbers) => {
+    const [value, setValue] = useState(0);
 
-    // const handleNumMinus = () => {
-    //     if (value === 0) {
-    //         setValue(0)
-    //     } else {
-    //         setValue(value - 1)
-    //     }
-    // }
-    // const handleNumAdd = () => {
-    //     setValue(value + 1)
-    // }
+    const onNumMinus = () => {
+        if (value === 0) {
+            setValue(0)
+        } else {
+            setValue(value - 1)
+        }
+    }
+    const onNumAdd = () => {
+        setValue(value + 1)
+    }
+    numbers = value
+    // { value, onNumMinus, onNumAdd }
     return (
         <>
             <div className={styles.spinner}>
