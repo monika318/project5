@@ -1,9 +1,9 @@
 import ProductA from './assets/_MG_6921.jpg'
 import ProductB from './assets/_MG_6942.jpg'
 import ProductC from './assets/_MG_6930.jpg'
-import ProductD from './assets/DI67_MG_6918.webp'
-import ProductE from './assets/_MG_6930.jpg'
-import ProductF from './assets/_MG_6948.jpg'
+import ProductD from './assets/DI67_MG_6914.jpg'
+import ProductE from './assets/_MG_6938.jpg'
+import ProductF from './assets/_MG_6927.jpg'
 
 
 const PRODUCTS = [
@@ -12,6 +12,7 @@ const PRODUCTS = [
         name: "Product One",
         price: 400,
         img: ProductA,
+        img1: "images/_MG_6921.jpg",
         material: "",
         size: "xl",
         imgArray: [
@@ -26,6 +27,7 @@ const PRODUCTS = [
         name: "Product Two",
         price: 450,
         img: ProductB,
+        img1: "images/_MG_6921.jpg",
         size: "xs",
         imgArray: [
             "images/_MG_6943.jpg",
@@ -40,6 +42,7 @@ const PRODUCTS = [
         name: "Product Three",
         price: 600,
         img: ProductC,
+        img1: "images/_MG_6921.jpg",
         size: "xxl",
         imgArray: [
             "images/_MG_6931.jpg",
@@ -61,6 +64,7 @@ const PRODUCTS = [
             "images/DI67_MG_6918.webp"
         ],
         img: ProductD,
+        img1: "images/_MG_6921.jpg",
         description: "Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet"
     },
     {
@@ -75,6 +79,7 @@ const PRODUCTS = [
             "images/_MG_6942.jpg"
         ],
         img: ProductE,
+        img1: "images/_MG_6921.jpg",
         description: "Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet"
     },
     {
@@ -88,6 +93,7 @@ const PRODUCTS = [
             "images/_MG_6950.jpg"
         ],
         img: ProductF,
+        img1: "images/_MG_6921.jpg",
         description: "Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet"
     },
     {
@@ -101,7 +107,7 @@ const PRODUCTS = [
             "images/_MG_6929.jpg",
             "images/_MG_6930.jpg"
         ],
-        img: ProductE,
+        img: ProductF,
         description: "Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet"
     }
 ]

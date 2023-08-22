@@ -144,13 +144,13 @@ const Navbar = () => {
                                     <Link to="#" className={styles.menubars}>
                                         <FaIcons.FaBars onClick={showSidebar} />
                                     </Link>
-                                    <Link to="/" className={styles.navitem} style={{ position: 'relative' }} ><FaIcons.FaRegHeart />
+                                    {/* <Link to="/" className={styles.navitem} style={{ position: 'relative' }} ><FaIcons.FaRegHeart />
                                         <span className="position-absolute  translate-middle badge rounded-pill" style={{ backgroundColor: "#7e8865", color: '#d9dfd7', fontSize: '8px', top: '13%', right: '-80%' }}>
                                             0
                                             <span className="visually-hidden">unread messages</span>
                                         </span>
-                                    </Link>
-                                    <Link to="/" className={styles.navitem}><FiIcons.FiSearch /></Link>
+                                    </Link> */}
+                                    <Link to="/shop" className={styles.navitem}><FiIcons.FiSearch /></Link>
                                     <Link onClick={handleCartClick} className={styles.navitem} style={{ position: 'relative' }}><AiIcons.AiOutlineShoppingCart />
                                         <span className="position-absolute  translate-middle badge rounded-pill" style={{ backgroundColor: "#7e8865", color: '#d9dfd7', fontSize: '8px', top: '13%', right: '-80%' }}>
                                             {CartItemNumber}

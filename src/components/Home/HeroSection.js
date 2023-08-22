@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 // Import Swiper React components
+import { Link } from 'react-router-dom'
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // images
@@ -30,33 +31,33 @@ const HeroSection = () => {
                         delay: 10000,
                         disableOnInteraction: false,
                     }}
-                    pagination={{
-                        clickable: true,
-                    }}
+                    // pagination={{
+                    //     clickable: true,
+                    // }}
                     // navigation={true}
                     modules={[Autoplay, Pagination, Navigation]}
                     className={styles.swiper}
                 >
                     <SwiperSlide className={`${styles.swiperSlide} ${styles.Div1}`}>
                         <div className={`${styles.textDiv1} ${activeSlideIndex === 0 ? styles.active : ''}`}>
-                            <h2>Fine & Stylish Earthenware</h2>
+                            <h2>Soft & Comfortable Pants </h2>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat commodi labore beatae, atque maiores ipsa! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum, repudiandae nisi dolores quae laborum unde</p>
-                            <button>Shop Now</button>
+                            <Link to='/shop'><button>Shop Now</button></Link>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide className={`${styles.swiperSlide} ${styles.Div5}`}>
                         <div className={`${styles.textDiv1} ${activeSlideIndex === 1 ? styles.active : ''}`}>
-                            <h2>Eco Friendly Art Clay Work</h2>
+                            <h2>Eco Friendly Handmade Products</h2>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat commodi labore beatae, atque maiores ipsa! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum, repudiandae nisi dolores quae laborum unde</p>
-                            <button>Shop Now</button>
+                            <Link to='/shop'><button>Shop Now</button></Link>
                         </div>
                     </SwiperSlide>
 
                     <SwiperSlide className={`${styles.swiperSlide} ${styles.Div3}`}>
                         <div className={`${styles.textDiv1} ${activeSlideIndex === 2 ? styles.active : ''}`}>
-                            <h2>Redefine Natural Clay</h2>
+                            <h2>Fine & Stylish Onesies</h2>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat commodi labore beatae, atque maiores ipsa! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum, repudiandae nisi dolores quae laborum unde</p>
-                            <button>Shop Now</button>
+                            <Link to='/shop'><button>Shop Now</button></Link>
                         </div>
                     </SwiperSlide>
                     {/*

@@ -5,7 +5,7 @@ import styles from './TopHeader.module.css'
 const TopHeader = () => {
     const location = useLocation();
     let locationString = location.pathname.slice(1);
-    const shouldShowNavbar = locationString.includes('dashboard');
+    const shouldShowNavbar = locationString.includes('dashboard') && !locationString.includes('AccessDenied');
     return (
         <div>
             {shouldShowNavbar &&

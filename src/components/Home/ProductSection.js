@@ -11,7 +11,9 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-import products from '../../Product.json';
+// import products from '../../Product.json';
+import products from '../../Products';
+
 
 // import required modules
 import { Navigation, Pagination } from 'swiper/modules';

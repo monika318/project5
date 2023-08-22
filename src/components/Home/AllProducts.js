@@ -4,7 +4,8 @@ import Card from '../CardAltered/Card'
 import Cart from '../CartAltered/Cart'
 import component1 from '../../images/Component5.png'
 import component2 from '../../images/Component8.png'
-import products from '../../Product.json'
+// import products from '../../Product.json'
+import products from '../../Products'
 
 const AllProducts = () => {
     const [showCart, setShowCart] = useState(false);

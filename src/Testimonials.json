@@ -2,25 +2,25 @@
   {
     "id": 1,
     "name": "Mrs. Gilly Jackson",
-    "img": "images/user/avatar1.jpg",
+    "img": "images/user/avatar1.webp",
     "review": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores officia qui impedit vel aliquam necessitatibus, ex ipsam obcaecati maxime. Accusantium.impedit vel aliquam necessitatibus, ex ipsam obcaecati maxime."
   },
   {
     "id": 2,
     "name": "Mr. Jilly Jackson",
-    "img": "images/user/avatar2.jpg",
+    "img": "images/user/avatar2.webp",
     "review": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores officia qui impedit vel aliquam necessitatibus, ex ipsam obcaecati maxime. Accusantium.impedit vel aliquam necessitatibus, ex ipsam obcaecati maxime."
   },
   {
     "id": 3,
     "name": "Mrs. Milly Jackson",
-    "img": "images/user/avatar1.jpg",
+    "img": "images/user/avatar1.webp",
     "review": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores officia qui impedit vel aliquam necessitatibus, ex ipsam obcaecati maxime. Accusantium.impedit vel aliquam necessitatibus, ex ipsam obcaecati maxime."
   },
   {
     "id": 4,
     "name": "Mr. Jilly Jackson",
-    "img": "images/user/avatar2.jpg",
+    "img": "images/user/avatar2.webp",
     "review": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores officia qui impedit vel aliquam necessitatibus, ex ipsam obcaecati maxime. Accusantium.impedit vel aliquam necessitatibus, ex ipsam obcaecati maxime."
   }
 ]

@@ -11,7 +11,7 @@ const SideBar = () => {
     let locationString = location.pathname.slice(1);
 
     const [pathname, setpathname] = useState(location.pathname.slice(11));
-    const shouldShowNavbar = locationString.includes('dashboard');
+    const shouldShowNavbar = locationString.includes('dashboard') && !locationString.includes('AccessDenied');
     useEffect(() => {
         setpathname(location.pathname.slice(11))
     }, [location])

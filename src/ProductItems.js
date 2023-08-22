@@ -55,6 +55,7 @@ const ProductItem = [
             "/images/_MG_6918.jpg"
         ],
         "img": "/images/DI67_MG_6914.jpg",
+        // "img": "/images/_MG_6915.jpg",
         "description": "Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet"
     },
     {

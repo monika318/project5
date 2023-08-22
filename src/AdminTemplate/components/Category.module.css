@@ -2,6 +2,7 @@
   width: 80%;
   margin-left: 20%;
   margin-top: 90px;
+  font-family: "Inter", sans-serif;
 }
 .Heading {
   display: flex;
@@ -33,15 +34,15 @@
 }
 .tableHeading .SN {
   width: 5%;
-  font-weight: 700;
+  font-weight: 500;
 }
 .tableHeading .Name {
   width: 55%;
-  font-weight: 700;
+  font-weight: 500;
 }
 .tableHeading .Actions {
   width: 40%;
-  font-weight: 700;
+  font-weight: 500;
 }
 .tableBody {
   display: flex;

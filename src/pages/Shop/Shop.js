@@ -1,16 +1,12 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import styles from './Shop.module.css'
 import TopBanner from '../../components/TopBanner/TopBanner'
 import { BsFillGrid3X3GapFill } from 'react-icons/bs'
 import { FaThList } from 'react-icons/fa'
 import * as AiIcons from 'react-icons/ai'
-// AiOutlineMinus
-// import Card from '../components/Card/Card'
 import Card from '../../components/CardAltered/Card'
-
-// import Cart from '../components/Cart/Cart'
 import Cart from '../../components/CartAltered/Cart'
-import products from '../../Product.json'
+// import products from '../../Product.json'
 import PRODUCTS from '../../Products'
 import CardList from '../../components/CardList/CardList'
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -19,16 +15,64 @@ import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
 
 const Shop = () => {
+
     const [View, setView] = useState('Grid')
     const [showCart, setShowCart] = useState(false);
     const [categoryA, setCategoryA] = useState(false);
     const [categoryB, setCategoryB] = useState(false);
-    const [FromPrice, setFromPrice] = useState('0');
-    const [ToPrice, setToPrice] = useState('0')
-
     const handleViewClick = (view) => {
         setView(view)
     }
+    const [SortBy, setSortBy] = useState('Featured');
+    const [FromPrice, setFromPrice] = useState('0');
+    const [ToPrice, setToPrice] = useState('0');
+    const [records, setRecords] = useState(PRODUCTS)
+
+
+    const handleFilterPrice = () => {
+        // Convert FromPrice and ToPrice to numbers
+        const fromPriceNumber = parseFloat(FromPrice);
+        const toPriceNumber = parseFloat(ToPrice);
+        // Filter products based on price range
+        const filteredProducts = PRODUCTS.filter(product => {
+            const productPrice = parseFloat(product.price);
+            return productPrice >= fromPriceNumber && productPrice <= toPriceNumber;
+        });
+        setRecords(filteredProducts)
+    }
+
+    useEffect(() => {
+        const sortedProducts = [...records].sort((a, b) => {
+            if (SortBy === 'Price, low to high') {
+                return parseFloat(a.price) - parseFloat(b.price);
+            } else if (SortBy === 'Price, high to low') {
+                return parseFloat(b.price) - parseFloat(a.price);
+            }
+            // Add more sorting criteria here if needed
+            return 0;
+        });
+        setRecords(sortedProducts)
+    }, [SortBy, records])
+    // Sorting logic
+
+    const handleClearPrice = () => {
+        setRecords(PRODUCTS)
+        setFromPrice('0')
+        setToPrice('0')
+    }
+
+
+    const [currentPage, setCurrentPage] = useState(1); // Current page number
+    const itemsPerPage = 6; // Number of items per page
+
+    // Calculate the index of the first and last items on the current page
+    const indexOfLastItem = currentPage * itemsPerPage;
+    const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+
+    // Get the items for the current page
+    const currentItems = records.slice(indexOfFirstItem, indexOfLastItem);
+
+
     return (
         <>
             <div className={styles.Shop}>
@@ -113,8 +157,8 @@ const Shop = () => {
                                         <input type='number' min='0' value={ToPrice} onChange={(e) => setToPrice(e.target.value)} />
                                     </div>
                                 </div>
-                                <button>Find</button>
-                                <button>Clear All</button>
+                                <button onClick={handleFilterPrice}>Find</button>
+                                <button onClick={handleClearPrice}>Clear All</button>
                             </div>
 
 
@@ -133,7 +177,12 @@ const Shop = () => {
                             <div className={styles.Category}>
                                 <div>
                                     Sort By :
-                                    <select name="filter" id="cars">
+                                    <select
+                                        name="filter"
+                                        id="cars"
+                                        value={SortBy}
+                                        onChange={e => setSortBy(e.target.value)}
+                                    >
                                         <option value="Featured">Featured</option>
                                         <option value="Price, low to high">Price, low to high</option>
                                         <option value="Price, high to low">Price, high to low</option>
@@ -144,7 +193,7 @@ const Shop = () => {
                         </div>
                         <div className={styles.DisplayProduct}>
                             {View === 'Grid' &&
-                                products.map((item, index) => {
+                                currentItems.map((item, index) => {
                                     return (
                                         <div className={styles.EachProduct} key={index}>
                                             <Card item={item} key={index} description='false' setShowCart={setShowCart} />
@@ -154,7 +203,7 @@ const Shop = () => {
                                 })
                             }
                             {View === 'List' &&
-                                products.map((item, index) => {
+                                currentItems.map((item, index) => {
                                     return (
                                         <div className={styles.ListProduct} key={index}>
                                             <CardList setShowCart={setShowCart} item={item} key={index} />
@@ -163,6 +212,22 @@ const Shop = () => {
                                     )
                                 })
                             }
+                        </div>
+                        <div className={styles.Pagination}>
+                            {/* Pagination controls */}
+                            <button
+                                disabled={currentPage === 1}
+                                onClick={() => setCurrentPage(currentPage - 1)}
+                            >
+                                &lArr;
+                            </button>
+                            <div>{currentPage}</div>
+                            <button
+                                disabled={indexOfLastItem >= records.length}
+                                onClick={() => setCurrentPage(currentPage + 1)}
+                            >
+                                &rArr;
+                            </button>
                         </div>
                     </div>
                 </div>

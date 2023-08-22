@@ -187,3 +187,25 @@
   height: 100%;
   object-fit: cover;
 }
+
+.Pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Pagination div {
+  border: 1px solid #03383c;
+  padding: 5px 20px;
+  color: #03383c;
+}
+.Pagination button {
+  border: 1px solid #03383c;
+  color: #03383c;
+  background-color: #7e886573;
+}
+
+.Pagination button:disabled {
+  color: #a0a0a0;
+  background-color: #e0e0e0;
+  cursor: not-allowed;
+}

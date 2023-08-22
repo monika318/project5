@@ -16,7 +16,7 @@
 .FloatingSection {
   height: 45vh;
   width: 80%;
-  background-image: url("../../images/background4.jpg");
+  background-image: url("../../images/background4.webp");
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -38,7 +38,7 @@
 }
 
 .BottomDivTest {
-  background-image: url("../../images/image5.jpg");
+  background-image: url("../../images/image5.webp");
   background-size: cover;
   background-attachment: fixed;
   background-color: bisque;

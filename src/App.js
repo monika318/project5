@@ -18,6 +18,7 @@ import AdminCategory from './AdminTemplate/components/Category'
 import AdminProduct from './AdminTemplate/components/Products/Products'
 import AdminOrder from './AdminTemplate/components/Order'
 import AdminAddProduct from './AdminTemplate/components/Products/AddProduct'
+import AdminAccessDenied from './AdminTemplate/components/AccessDenied/AccessDenied'
 const App = () => {
   return (
     <div>
@@ -39,6 +40,7 @@ const App = () => {
           <TopHeader />
           <Routes>
             <Route path='/dashboard/Home' element={<AdminHome />} />
+            <Route path='/dashboard/AccessDenied' element={<AdminAccessDenied />} />
             <Route path='/dashboard/Category' element={<AdminCategory />} />
             <Route path='/dashboard/Products' element={<AdminProduct />} />
             <Route path='/dashboard/add_product' element={<AdminAddProduct />} />
