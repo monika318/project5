@@ -10,6 +10,7 @@
   width: 50%;
   height: 90vh;
   position: relative;
+  z-index: 990;
 }
 .LeftDiv img {
   width: 100%;
@@ -19,6 +20,7 @@
 }
 .RightDiv {
   width: 50%;
+  z-index: 990;
 }
 .productName {
   font-family: "Cagliostro", sans-serif;
@@ -42,6 +44,7 @@
 .swiper {
   width: 100%;
   height: 100%;
+  z-index: 990;
 }
 
 .swiperSlide {
@@ -52,6 +55,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 990;
 }
 
 .swiperSlide img {
@@ -135,6 +139,7 @@
   background-color: rgba(0, 0, 0, 0.166);
 } */
 
+/* Cart */
 .model {
   width: 100%;
   height: 100vh;

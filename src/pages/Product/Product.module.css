@@ -1,0 +1,170 @@
+.ProductOuter {
+  margin-top: 7em;
+  width: 100%;
+  margin-bottom: 2em;
+}
+
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #03383c;
+  margin-bottom: 3em;
+  /* background-image: url("../images/headerBackground1.jpg"); */
+  /* background-size: contain; */
+}
+.banner a {
+  text-decoration: none;
+  color: #03383c;
+  font-size: 20px;
+}
+.banner a:hover {
+  color: #7e8865;
+}
+.SoloProduct {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+
+  width: 80%;
+}
+.ImageDiv {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.ImageDiv img {
+  /* height: 500px; */
+  width: 100%;
+}
+.smallImages {
+  display: flex;
+  gap: 10px;
+}
+.smallImages img {
+  height: 200px;
+  width: 100%;
+}
+.smallimg {
+  opacity: 0.6;
+}
+.smallImages img:hover {
+  opacity: 1;
+  border: 1px solid black;
+}
+.DescriptionDiv {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+.active {
+  opacity: 1;
+  border: 1px solid black;
+}
+.DescriptionDiv button {
+  background-color: #7e8865;
+  color: white;
+  border: none;
+  padding: 15px 20px;
+  width: 60%;
+  margin: 10px 0px 5px 0;
+}
+.DescriptionDiv h3 {
+  font-size: 40px;
+  margin-bottom: 0.5em;
+}
+.DescriptionDiv span {
+  font-size: 23px;
+}
+.Buttons {
+  display: flex;
+  gap: 10px;
+}
+.Information {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.Buttons {
+  width: 80%;
+  display: flex;
+  justify-content: flex-start;
+}
+.Buttons button {
+  background-color: #7e8865;
+  color: white;
+  border: none;
+  padding: 15px 35px;
+  margin: 10px 0px 0px 0;
+  font-size: 20px;
+  border: 1px solid #7e8865;
+}
+.Buttons button:hover {
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+}
+.Buttons .clicked {
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+}
+.Details {
+  width: 80%;
+  border: 1px solid black;
+  font-size: 20px;
+  text-align: justify;
+  padding: 2em;
+  color: #03383c;
+  font-family: "Inter", sans-serif;
+  line-height: 1.75em;
+}
+
+/* showcart */
+.model {
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0, 0, 0, 0.7);
+  transition: opacity 0s ease, visibility 0s ease, transform 0s ease;
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0);
+  overflow: hidden;
+}
+
+.model.open {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+  z-index: 999;
+}
+
+.SideCart {
+  position: fixed;
+  width: 30%;
+  right: -40%;
+  top: 0%;
+  background-color: rgb(217 223 215);
+  padding: 12px;
+  height: 100%;
+  z-index: 999;
+  overflow-y: scroll;
+}
+.model.open .SideCart {
+  right: 0%;
+  transition: all 0.88s ease-in;
+}

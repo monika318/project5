@@ -1,0 +1,56 @@
+.Orders {
+  margin-top: 80px;
+  margin-left: 20%;
+  padding: 20px 30px;
+  font-family: "Inter", sans-serif;
+
+  background-color: whitesmoke;
+}
+.Topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+}
+.Heading {
+  display: flex;
+  align-items: center;
+}
+.Heading h6 {
+  margin: 0 0 0 5px;
+}
+.Button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.Button button {
+  color: white;
+  background-color: #7e8865;
+  border: 1px solid #7e8865;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+.Button button:hover {
+  background-color: white;
+  color: #7e8865;
+}
+.search {
+  border-radius: 5px;
+  color: grey;
+}
+.search input {
+  border: 1px solid rgba(128, 128, 128, 0.639);
+  border-radius: 5px;
+  padding: 10px;
+}
+.Expandable {
+  padding: 1% 0 1% 5%;
+}
+.Expandable p {
+  margin: 0;
+
+  font-size: 15px;
+  font-family: "Inter", sans-serif;
+}

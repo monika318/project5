@@ -1,0 +1,100 @@
+.Contact {
+  margin: 6.5em 0;
+  text-align: center;
+  color: #03383c;
+}
+.Contact iframe {
+  margin-top: 3rem;
+}
+.ContactInfo {
+  margin-top: 3em;
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+}
+.InnerContactInfo {
+  width: 25%;
+  border: 1px solid black;
+  padding: 1em 2em 2em 2em;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+.InnerContactInfo h1 {
+  text-align: left;
+}
+.InnerContactInfo p {
+  text-align: left;
+  font-size: 18px;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+.Icon {
+  padding: 8px 14px;
+  background-color: #7e8865;
+  color: white;
+  font-size: 20px;
+  transition: all 1s ease;
+}
+.InnerContactInfo:hover .Icon {
+  background-color: black;
+  color: white;
+}
+.ContactForm {
+  margin-top: 5rem;
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.container {
+  width: 80%;
+  text-align: center;
+}
+.ContactForm h1 {
+  font-size: 50px;
+}
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  margin: 0 auto;
+}
+.gridItem {
+  text-align: center;
+}
+.Fourthcolumn {
+  grid-column: span 3;
+}
+.gridItem Input {
+  width: 100%;
+  resize: none;
+  padding: 20px 10px;
+  box-sizing: border-box;
+}
+.gridItem Input::placeholder,
+.gridItem textarea::placeholder {
+  font-size: 20px;
+}
+.gridItem textarea {
+  width: 100%;
+  resize: none;
+  padding: 20px 10px;
+  box-sizing: border-box;
+}
+.ContactForm button {
+  background-color: #7e8865;
+  color: white;
+  border: none;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  padding: 10px 35px;
+  transition: all 0.5s ease;
+  margin-top: 1.5em;
+}
+.ContactForm button:hover {
+  background-color: black;
+}

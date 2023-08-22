@@ -19,7 +19,49 @@ code {
   --darkprimary: #03383c;
   --green: #7e8865;
   --blue: #2f4858;
+  --darkGreen: #525443;
   --backgorund: #dfdfd8;
 
   /* Cagliostro', sans-serif; */
+}
+
+/* Header */
+.headerAll {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2em;
+  gap: 20px;
+}
+.headerAll img {
+  height: 100%;
+}
+.hiddenHeading {
+  opacity: 0.5;
+  /* filter: blur(5px); */
+  transform: translateY(80%);
+  transition: all 3s;
+}
+.showHeading {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(-10%);
+}
+
+/* Testimonials */
+.Testswiper {
+  width: 70%;
+  height: 100%;
+  color: white;
+}
+.hiddenTestimonials {
+  opacity: 0;
+  /* filter: blur(5px); */
+  transform: translateY(80%);
+  transition: all 1s;
+}
+.showTestimonials {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(-10%);
 }

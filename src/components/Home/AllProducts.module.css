@@ -7,16 +7,7 @@
   padding-bottom: 4em;
   /* background-image: url("../../images/background3.png"); */
 }
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 2em;
-  gap: 20px;
-}
-.header img {
-  height: 100%;
-}
+
 .AllProducts h1 {
   text-align: center;
 

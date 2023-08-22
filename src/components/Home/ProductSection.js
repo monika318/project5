@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import styles from './ProductSection.module.css'
 import image from '../../images/product5.jpg'
 
-import Cart from '../Cart/Cart'
-import Card from '../Card/Card'
+import Cart from '../CartAltered/Cart'
+import Card from '../CardAltered/Card'
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
@@ -48,11 +48,11 @@ const ProductSection = () => {
                 >
                     {products.map((item, index) => {
                         return (
-                            <>
+                            <div key={index}>
                                 <SwiperSlide className={styles.swiperSlide} key={index}>
                                     <Card item={item} setShowCart={setShowCart} key={index} />
                                 </SwiperSlide>
-                            </>
+                            </div>
                         )
                     })}
                 </Swiper>

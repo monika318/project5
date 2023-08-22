@@ -1,0 +1,43 @@
+/* CounterDiv */
+.CounterDiv {
+  background-color: #525443;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  color: white;
+  padding: 6rem 4rem;
+  gap: 3em;
+  margin-bottom: 2rem;
+}
+.StoreDiv {
+  width: 40%;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+  padding: 2em;
+  position: relative;
+}
+.StoreDiv p {
+  font-size: 20px;
+  margin: 0px;
+}
+.Icon {
+  position: absolute;
+  top: 8%;
+  left: -7%;
+  background-color: #03383c;
+  border: 1px solid white;
+  color: whitesmoke;
+  font-size: 50px;
+  padding: 0 10px 3px 10px;
+}
+.StoreDiv:hover .Icon {
+  color: #03383c;
+  background-color: whitesmoke;
+}
+.scrolled {
+  background-color: black;
+}

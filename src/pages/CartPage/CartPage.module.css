@@ -1,0 +1,67 @@
+.CartPage {
+  margin-top: 100px;
+}
+.OuterCart {
+  display: flex;
+  justify-content: center;
+}
+.CartDiv {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  margin-top: 2em;
+  gap: 20px;
+  padding: 0 5em;
+}
+.ItemList {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.Card {
+  border: 1px solid black;
+  display: flex;
+  gap: 10px;
+  position: relative;
+}
+.CardImage {
+  width: 20%;
+}
+.CardImage img {
+  width: 100%;
+}
+.OrderSummary {
+  width: 40%;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.OrderSummary p {
+  font-size: 25px;
+}
+.CancelButton {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #7e8865;
+  color: white;
+  padding: 5px 8px 3px 7px;
+  cursor: pointer;
+}
+.CartEmpty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4em 0em;
+  flex-direction: column;
+  gap: 0.5em;
+}
+.CartEmpty h1 {
+  color: #03383c;
+  font-size: 50px;
+}
+.CartEmpty p {
+  color: #525443;
+}

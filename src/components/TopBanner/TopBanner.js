@@ -7,7 +7,7 @@ const TopBanner = (props) => {
     const { Pagename, PageLink } = props;
     return (
         <>
-            <div className={styles.banner}>
+            <div className={styles.banner} >
                 <h1>{Pagename}</h1>
                 <div className={styles.headerText}>
                     <Link to="/">Home</Link>

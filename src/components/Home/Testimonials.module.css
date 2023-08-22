@@ -32,14 +32,12 @@
 }
 
 .FloatingSection button {
-  background-color: #7e8865;
-  color: white;
-  border: none;
   padding: 15px 35px;
   font-size: 20px;
+  font-family: "Cagliostro", sans-serif;
 }
 
-.BottomDiv {
+.BottomDivTest {
   background-image: url("../../images/image5.jpg");
   background-size: cover;
   background-attachment: fixed;
@@ -52,11 +50,11 @@
   align-items: center;
   padding-top: 9em;
 }
-.BottomDiv h1 {
+.BottomDivTest h1 {
   color: white;
   z-index: 2;
   font-size: 50px;
-  margin-bottom: 0.5em;
+  margin-bottom: 1em;
 }
 .overlay {
   position: absolute;

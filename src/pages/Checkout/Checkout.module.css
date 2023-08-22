@@ -1,0 +1,123 @@
+.Checkout {
+  font-family: "Montserrat", sans-serif;
+}
+.InnerCheckout {
+  display: flex;
+  justify-content: center;
+}
+.FormCheckout {
+  width: 50%;
+  padding: 40px 5%;
+}
+.FormCheckout input {
+  width: 100%;
+  border-radius: 5px;
+  padding: 15px 10px;
+  border: 1px solid grey;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+}
+.FormCheckout input::placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+}
+
+.FormCheckout select {
+  width: 100%;
+  border-radius: 5px;
+  padding: 15px 10px;
+  border: 1px solid grey;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+}
+.FormCheckout select::placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+}
+.contactDiv {
+  margin-bottom: 1.5em;
+}
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  margin: 0 auto;
+  width: 100%;
+}
+.gridItem {
+  text-align: center;
+  /* border: 1px solid black; */
+}
+.span2 {
+  grid-column: span 2;
+}
+.span3 {
+  grid-column: span 3;
+}
+.row_with_2_cols {
+  width: 100%; /* Two columns for this row */
+}
+.gridgrid {
+  display: flex;
+  gap: 10px;
+}
+.InnergridItem {
+  width: 50%;
+}
+.VerticalLine {
+  border-left: 1px solid black;
+  height: 95vh;
+}
+.submitButton button {
+  border: none;
+  background-color: #7e8865;
+  padding: 23px 20px;
+  color: whitesmoke;
+  border-radius: 5px;
+  margin-top: 25px;
+  font-family: "Cagliostro", sans-serif;
+  transition: all 1s ease;
+}
+.submitButton button:hover {
+  background-color: black;
+}
+.ListCheckout {
+  width: 40%;
+  padding: 40px 5%;
+}
+.ItemCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ProductInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.Image {
+  border: 1px solid rgb(170, 170, 170);
+  border-radius: 5px;
+  width: 100px;
+  text-align: center;
+}
+.Image img {
+  width: 95%;
+  object-fit: contain;
+}
+.name {
+  margin-left: 10px;
+}
+.name h6 {
+  margin: 0;
+}
+.Price p {
+  margin: 0;
+}
+.horzontal {
+  width: 100%;
+}
+.pricingItem {
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,0 +1,95 @@
+.Category {
+  width: 80%;
+  margin-left: 20%;
+  margin-top: 90px;
+}
+.Heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+.Heading button {
+  color: white;
+  background-color: #7e8865;
+  border: 1px solid #7e8865;
+  padding: 10px;
+  border-radius: 5px;
+}
+.Heading button:hover {
+  background-color: white;
+  color: #7e8865;
+}
+.table {
+  background-color: white;
+  margin: 5px 15px;
+  border-radius: 5px;
+  border: 1px solid grey;
+}
+.tableHeading {
+  display: flex;
+  border-bottom: 1px solid grey;
+  padding: 7px;
+}
+.tableHeading .SN {
+  width: 5%;
+  font-weight: 700;
+}
+.tableHeading .Name {
+  width: 55%;
+  font-weight: 700;
+}
+.tableHeading .Actions {
+  width: 40%;
+  font-weight: 700;
+}
+.tableBody {
+  display: flex;
+  border-bottom: 1px solid grey;
+  padding: 7px;
+}
+.tableBody .SN {
+  width: 5%;
+}
+.tableBody .Name {
+  width: 55%;
+}
+.tableBody .Actions {
+  width: 40%;
+}
+.ModalDiv {
+  font-family: "Inter", sans-serif;
+}
+.ModalButton {
+  float: right;
+  border: 1px solid rgb(203, 3, 3);
+  color: white;
+  background-color: rgb(203, 3, 3);
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+.ModalButton:hover {
+  background-color: white;
+  color: rgb(203, 3, 3);
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 1.5em;
+}
+.form input {
+  padding: 10px;
+  width: 90%;
+  border-radius: 5px;
+}
+
+.ModalSubmitButton {
+  border: 1px solid rgb(203, 3, 3);
+  color: white;
+  background-color: rgb(203, 3, 3);
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin: 2em 0 1em 0;
+  float: right;
+}

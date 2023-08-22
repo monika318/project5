@@ -1,0 +1,83 @@
+.AddProduct {
+  width: 80%;
+  margin-left: 20%;
+  margin-top: 85px;
+
+  background-color: whitesmoke;
+}
+.Topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+}
+.Heading {
+  display: flex;
+  align-items: center;
+}
+.Heading h6 {
+  margin: 0 0 0 5px;
+}
+.Button button {
+  color: white;
+  background-color: #7e8865;
+  border: 1px solid #7e8865;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+.Button button:hover {
+  background-color: white;
+  color: #7e8865;
+}
+.formPart {
+  padding: 20px;
+}
+.formPart .gridContainer {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 10px;
+  padding: 10px;
+}
+.gridContainer .item1,
+.item2,
+.item3 {
+  border: 1px solid rgba(128, 128, 128, 0.187);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+}
+.item3 {
+  height: fit-content;
+}
+.item1 input,
+.item3 input,
+.item1 textarea,
+.item1 select,
+.item3 select {
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin: 1px 5px 15px 5px;
+  border: 1px solid rgba(128, 128, 128, 0.439);
+}
+.item1 input:focus,
+.item1 textarea:focus,
+.item3 input:focus {
+  border-color: #7e8865;
+  box-shadow: 0 0 5px #7e8865a1;
+}
+.item1 label {
+  margin: 5px 5px 1px 5px;
+}
+.item2 .MultiSelect {
+  border: none;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-family: "Cagliostro", sans-serif;
+}
+.item2 input {
+  padding: 23px 10px;
+}
