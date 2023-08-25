@@ -5,6 +5,7 @@
   align-items: center;
   margin: 4em 0 2em 0;
   color: #03383c;
+  overflow: hidden;
 }
 .LeftDiv {
   width: 50%;
@@ -177,4 +178,10 @@
 .model.open .SideCart {
   right: 0%;
   transition: all 0.88s ease-in;
+}
+
+@media only screen and (max-width: 1200px) {
+  .productSection {
+    display: none;
+  }
 }

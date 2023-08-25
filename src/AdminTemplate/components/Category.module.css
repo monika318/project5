@@ -1,8 +1,10 @@
 .Category {
   width: 80%;
   margin-left: 20%;
-  margin-top: 90px;
+  margin-top: 80px;
+  background-color: whitesmoke;
   font-family: "Inter", sans-serif;
+  height: 100vh;
 }
 .Heading {
   display: flex;

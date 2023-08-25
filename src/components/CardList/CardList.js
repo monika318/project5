@@ -74,7 +74,7 @@ const CardList = (props) => {
                                 </div>
                                 <div className={styles.ModalTextDiv}>
                                     <h3>{item.name}</h3>
-                                    <p><span>Price:</span> {item.price}</p>
+                                    <p><span>Price:</span> ${item.price}</p>
                                     <p><span>Avalability:</span> </p>
                                     <p><span>Quantity:</span> </p>
                                     <p><span>Size: {item.size}</span> </p>
@@ -87,7 +87,7 @@ const CardList = (props) => {
                                     <Button name="Add to Cart" widthProp="50%" action='/cart'></Button>
                                     {/* {<p>Input The number of items</p>} */}
                                     {/* action={cartItems[item.id] > 0 ? '/cart' : ''} */}
-                                    <Button name="Add to wishlist" widthProp="50%"></Button>
+                                    {/* <Button name="Add to wishlist" widthProp="50%"></Button> */}
                                     <button className={styles.ProductButton} onClick={() => handleImageOnClick(item.id)}> View Product &rarr;</button>
                                 </div>
                             </div>
@@ -103,10 +103,10 @@ const CardList = (props) => {
                             <AiIcons.AiOutlineShoppingCart />
                         </div>
                         <div className={styles.v1}></div>
-                        <div className={styles.Icons}>
+                        {/* <div className={styles.Icons}>
                             <AiIcons.AiOutlineStar />
                         </div>
-                        <div className={styles.v1}></div>
+                        <div className={styles.v1}></div> */}
                         <div className={styles.Icons}>
                             <AiIcons.AiOutlineSearch onClick={() => setModalOpen(true)} />
                         </div>
@@ -121,7 +121,7 @@ const CardList = (props) => {
                         <AiIcons.AiFillStar />
                         <AiIcons.AiFillStar />
                     </p>
-                    <p>{item.price}</p>
+                    <p>${item.price}</p>
                     {/* {props.description && <p style={{ width: '80%', textAlign: 'center' }}>{item.description}</p>} */}
                 </div>
             </div>

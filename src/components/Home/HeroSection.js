@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom'
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // images
-import image1 from '../../images/product6.png'
-import image2 from '../../images/product4.jpg'
+import image1 from '../../images/product6.webp'
+import image2 from '../../images/product4.webp'
 
 // Import Swiper styles
 import 'swiper/css';

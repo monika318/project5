@@ -144,7 +144,33 @@
   color: grey;
   font-size: 15px;
 }
-
+@media only screen and (max-width: 1000px) {
+  .TeamMembers {
+    flex-wrap: wrap;
+  }
+  .Card {
+    width: 40%;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .OurTeam p {
+    font-size: 15px;
+  }
+  .Card {
+    width: 80%;
+  }
+  .Cardimage img,
+  .Cardimage {
+    height: 250px;
+  }
+  .Cardtext,
+  .Cardtext p {
+    width: 100%;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 700px) {
+}
 /* Production */
 
 .gridContainer {
@@ -232,4 +258,64 @@
 .thirdItem,
 .fourthItem {
   height: 300px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .gridItem.firstItem {
+    grid-column: span 3;
+    grid-row: span 1;
+    height: 70vh;
+  }
+  .gridItem.secondItem {
+    height: 70vh;
+    grid-column: span 3;
+    object-fit: cover;
+  }
+  .secondItem img,
+  .thirdItem img {
+    height: 100%;
+  }
+  .gridItem.thirdItem {
+    height: 70vh;
+    grid-column: span 3;
+    object-fit: cover;
+  }
+  .gridItem.fourthItem {
+    height: 70vh;
+    grid-column: span 3;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .AboutCompany {
+    flex-wrap: wrap;
+  }
+  .AboutText {
+    width: 80%;
+  }
+  .AboutImage {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .gridItem.firstItem {
+    grid-column: span 3;
+    grid-row: span 1;
+    height: 50vh;
+  }
+  .gridItem.secondItem {
+    height: 50vh;
+    grid-column: span 3;
+    object-fit: cover;
+  }
+  .secondItem img {
+    height: 100%;
+  }
+  .gridItem.thirdItem {
+    height: 50vh;
+    grid-column: span 3;
+  }
+  .gridItem.fourthItem {
+    height: 50vh;
+    grid-column: span 3;
+  }
 }

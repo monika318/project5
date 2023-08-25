@@ -25,17 +25,23 @@ export const ShopContextProvider = (props) => {
         return totalAmount
     }
     const addToCart = (itemId) => {
-        setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
+        if (itemId >= 0) {
+            setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
+        }
     };
     const CancelProductFromCart = (itemId) => {
         setCartItems((prev) => ({ ...prev, [itemId]: 0 }));
     };
     const removeFromCart = (itemId) => {
-        setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
+        if (itemId >= 0) {
+            setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
+        }
     };
 
     const updateCartItemCount = (newAmount, itemId) => {
-        setCartItems((prev) => ({ ...prev, [itemId]: newAmount }));
+        if (newAmount >= 0) {
+            setCartItems((prev) => ({ ...prev, [itemId]: newAmount }));
+        }
     }
 
     const contextValue = {

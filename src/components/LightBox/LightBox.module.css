@@ -32,3 +32,8 @@
   opacity: 1;
   border: 1px solid black;
 }
+.imageDive {
+  height: 200px;
+  width: 150px;
+  /* background-color: green; */
+}

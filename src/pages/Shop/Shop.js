@@ -57,20 +57,21 @@ const Shop = () => {
 
     const handleClearPrice = () => {
         setRecords(PRODUCTS)
-        setFromPrice('0')
-        setToPrice('0')
+        // setFromPrice('0')
+        // setToPrice('0')
     }
 
-
+    // eslint-disable-next-line
     const [currentPage, setCurrentPage] = useState(1); // Current page number
+    // eslint-disable-next-line
     const itemsPerPage = 6; // Number of items per page
 
     // Calculate the index of the first and last items on the current page
-    const indexOfLastItem = currentPage * itemsPerPage;
-    const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+    // const indexOfLastItem = currentPage * itemsPerPage;
+    // const indexOfFirstItem = indexOfLastItem - itemsPerPage;
 
     // Get the items for the current page
-    const currentItems = records.slice(indexOfFirstItem, indexOfLastItem);
+    // const currentItems = records.slice(indexOfFirstItem, indexOfLastItem);
 
 
     return (
@@ -193,7 +194,7 @@ const Shop = () => {
                         </div>
                         <div className={styles.DisplayProduct}>
                             {View === 'Grid' &&
-                                currentItems.map((item, index) => {
+                                records.map((item, index) => {
                                     return (
                                         <div className={styles.EachProduct} key={index}>
                                             <Card item={item} key={index} description='false' setShowCart={setShowCart} />
@@ -203,7 +204,7 @@ const Shop = () => {
                                 })
                             }
                             {View === 'List' &&
-                                currentItems.map((item, index) => {
+                                records.map((item, index) => {
                                     return (
                                         <div className={styles.ListProduct} key={index}>
                                             <CardList setShowCart={setShowCart} item={item} key={index} />
@@ -213,8 +214,7 @@ const Shop = () => {
                                 })
                             }
                         </div>
-                        <div className={styles.Pagination}>
-                            {/* Pagination controls */}
+                        {/* <div className={styles.Pagination}>
                             <button
                                 disabled={currentPage === 1}
                                 onClick={() => setCurrentPage(currentPage - 1)}
@@ -228,7 +228,7 @@ const Shop = () => {
                             >
                                 &rArr;
                             </button>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>

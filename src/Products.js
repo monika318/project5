@@ -1,9 +1,9 @@
-import ProductA from './assets/_MG_6921.jpg'
-import ProductB from './assets/_MG_6942.jpg'
-import ProductC from './assets/_MG_6930.jpg'
-import ProductD from './assets/DI67_MG_6914.jpg'
-import ProductE from './assets/_MG_6938.jpg'
-import ProductF from './assets/_MG_6927.jpg'
+import ProductA from './assets/_MG_6921.webp'
+import ProductB from './assets/_MG_6942.webp'
+import ProductC from './assets/_MG_6930.webp'
+import ProductD from './assets/DI67_MG_6914.webp'
+import ProductE from './assets/_MG_6938.webp'
+import ProductF from './assets/_MG_6927.webp'
 
 
 const PRODUCTS = [
@@ -20,6 +20,7 @@ const PRODUCTS = [
             "images/_MG_6922.jpg",
             "images/_MG_6923.jpg"
         ],
+        crossPrice: 500,
         description: "Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet"
     },
     {
@@ -35,6 +36,7 @@ const PRODUCTS = [
             "images/_MG_6945.jpg",
             "images/_MG_6946.jpg"
         ],
+        crossPrice: 500,
         description: "Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet"
     },
     {
@@ -50,6 +52,7 @@ const PRODUCTS = [
             "images/_MG_6933.jpg",
             "images/_MG_6934.jpg"
         ],
+        crossPrice: 700,
         description: "Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet"
     },
     {
@@ -64,6 +67,7 @@ const PRODUCTS = [
             "images/DI67_MG_6918.webp"
         ],
         img: ProductD,
+        crossPrice: 800,
         img1: "images/_MG_6921.jpg",
         description: "Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet"
     },
@@ -79,6 +83,7 @@ const PRODUCTS = [
             "images/_MG_6942.jpg"
         ],
         img: ProductE,
+        crossPrice: 400,
         img1: "images/_MG_6921.jpg",
         description: "Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet"
     },
@@ -93,6 +98,7 @@ const PRODUCTS = [
             "images/_MG_6950.jpg"
         ],
         img: ProductF,
+        crossPrice: 500,
         img1: "images/_MG_6921.jpg",
         description: "Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet"
     },
@@ -108,6 +114,7 @@ const PRODUCTS = [
             "images/_MG_6930.jpg"
         ],
         img: ProductF,
+        crossPrice: 500,
         description: "Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet"
     }
 ]

@@ -77,7 +77,7 @@ const Cart = (props) => {
                     )
                 }
                 else {
-                    return <p></p>
+                    return <div key={index}></div>
                 }
             })}
             <div className={!isCartEmpty ? styles.TotalAmount : styles.hide}>

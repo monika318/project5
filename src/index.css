@@ -54,9 +54,19 @@ code {
   height: 100%;
   color: white;
 }
-.hiddenTestimonials {
+@media only screen and (max-width: 900px) {
+  .Testswiper {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .Testswiper {
+    width: 95%;
+  }
+}
+/* .hiddenTestimonials {
   opacity: 0;
-  /* filter: blur(5px); */
+ 
   transform: translateY(80%);
   transition: all 1s;
 }
@@ -64,4 +74,4 @@ code {
   opacity: 1;
   filter: blur(0);
   transform: translateY(-10%);
-}
+} */

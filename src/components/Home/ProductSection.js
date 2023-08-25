@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styles from './ProductSection.module.css'
-import image from '../../images/product5.jpg'
+import image from '../../images/product5.webp'
 
 import Cart from '../CartAltered/Cart'
 import Card from '../CardAltered/Card'

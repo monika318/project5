@@ -3,7 +3,8 @@ import { useParams } from 'react-router-dom'
 import Cart from '../../components/CartAltered/Cart'
 import styles from './Product.module.css'
 // import products from '../Product.json'
-import ProductItem from '../../ProductItems'
+// importPRODUCTS from '../../ProductItems'
+import PRODUCTS from '../../Products'
 import TopBanner from '../../components/TopBanner/TopBanner'
 import Lightbox from '../../components/LightBox/Lightbox'
 import { ShopContext } from '../../context/ShopContext';
@@ -15,10 +16,12 @@ const Product = () => {
     const [showCart, setShowCart] = useState(false);
     const [options, setoptions] = useState('Description')
     const { id } = useParams();
+    console.log(id)
     const { addToCart } = useContext(ShopContext);
 
-    const productWithId = ProductItem.find(product => product.id === id);
+    const productWithId = PRODUCTS.find(product => product.id === parseInt(id));
 
+    console.log(productWithId)
     // const handleAddToCart = (id) => {
     //     // console.log(JSON.stringify(id))
     //     setShowCart(true);
@@ -58,13 +61,16 @@ const Product = () => {
                     </div>
                 </div>
                 <TopBanner Pagename='Product' PageLink={`/product/${id}`} />
-
                 <div className={styles.SoloProduct}>
                     <div className={styles.container}>
+                        {/* <Lightbox id={id} /> */}
                         <Lightbox img={productWithId.img} imgArray={productWithId.imgArray} />
                         <div className={styles.DescriptionDiv}>
                             <h3>{productWithId.name}</h3>
-                            <p><span>Price:</span> {productWithId.price}</p>
+                            <div className={styles.ProductPrice}>
+                                <h1>${productWithId.price}</h1>
+                            </div>
+                            {/* <p><span>Price:</span> {productWithId.price}</p> */}
                             <p><span>Avalability:</span> </p>
                             <p><span>Quantity:</span> </p>
                             <p><span>Size: {productWithId.size}</span> </p>
@@ -86,24 +92,16 @@ const Product = () => {
                         <div className={styles.Descrption}>
                             <strong>Sample Paragraph Text</strong>
                             <p>
-                                {productWithId.description}</p>
+                                {productWithId.description}
+                            </p>
                         </div>}
                     {options === 'Shipping' &&
                         <div className={styles.Shipping}>
                             <strong>Returns Policy</strong>
-                            <p>You may return most new, unopened items within 30 days of delivery for a full refund. We'll also pay the return shipping costs if the return is a result of our error (you received an incorrect or defective item, etc.).
-
-                                You should expect to receive your refund within four weeks of giving your package to the return shipper, however, in many cases you will receive a refund more quickly. This time period includes the transit time for us to receive your return from the shipper (5 to 10 business days), the time it takes us to process your return once we receive it (3 to 5 business days), and the time it takes your bank to process our refund request (5 to 10 business days).
-
-                                If you need to return an item, simply login to your account, view the order using the 'Complete Orders' link under the My Account menu and click the Return Item(s) button. We'll notify you via e-mail of your refund once we've received and processed the returned item.
-                            </p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quidem ab maiores! Qui dolores sapiente ducimus ad vero assumenda voluptates? Labore, error! Veritatis, accusantium eius dolorem magni, molestias, aut id sit porro voluptates totam doloremque reprehenderit reiciendis repudiandae distinctio nulla blanditiis facilis minima nesciunt quaerat! Nobis, excepturi. Nesciunt temporibus perferendis corrupti fuga unde voluptatem, dolorem dignissimos natus? Debitis doloribus sequi quisquam a amet est, omnis totam repudiandae dolorem eaque illo accusantium mollitia magnam error vel! Earum ipsa tenetur excepturi consectetur illo, corporis quos sit! Quos, dicta possimus alias error amet distinctio, voluptates vel molestiae quis ipsam deleniti placeat debitis labore!</p>
                             <strong>Shipping</strong>
                             <p>
-                                We can ship to virtually any address in the world. Note that there are restrictions on some products, and some products cannot be shipped to international destinations.
-
-                                When you place an order, we will estimate shipping and delivery dates for you based on the availability of your items and the shipping options you choose. Depending on the shipping provider you choose, shipping date estimates may appear on the shipping quotes page.
-
-                                Please also note that the shipping rates for many items we sell are weight-based. The weight of any such item can be found on its detail page. To reflect the policies of the shipping companies we use, all weights will be rounded up to the next full pound.
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque natus nobis veniam doloremque velit assumenda vitae magni nihil eos accusantium, modi ipsa quibusdam rem earum. Laborum sunt reprehenderit animi eum voluptates debitis ratione exercitationem nam quos perspiciatis eveniet nulla non eligendi molestiae doloremque, quo amet ad, maxime cum, quia suscipit. Fugit expedita id illo ex voluptatibus alias, sed aspernatur, incidunt, accusantium fugiat autem facere. Iste commodi deleniti dicta neque inventore architecto, laborum alias doloremque ipsa, harum sed? Quibusdam, hic, voluptates voluptatem velit laborum delectus quo ab aliquid nam at illo adipisci. Aspernatur amet similique accusantium odio delectus odit, veniam dolore voluptas nihil perferendis dolorum eveniet pariatur autem doloribus. Temporibus doloribus ratione magnam, nobis expedita quas consequatur, eos rerum animi laboriosam sunt nemo neque incidunt ipsam, voluptatem est nisi quam? Nemo.
                             </p>
                         </div>}
                     {options === 'Reviews' &&

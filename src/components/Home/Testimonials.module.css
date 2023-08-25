@@ -4,6 +4,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 .TopSection {
   /* background-image: url("../../images/background3.png"); */
@@ -96,4 +97,54 @@
   margin: 1.5em;
   font-size: 20px;
 }
-/* swiper */
+@media only screen and (max-width: 1000px) {
+  .FloatingSection {
+    height: 30vh;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .FloatingSection {
+    height: 30vh;
+  }
+  .swiperSlide p {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 830px) {
+  .FloatingSection {
+    height: 30vh;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .BottomDivTest h1 {
+    font-size: 40px;
+  }
+  .swiperSlide p {
+    font-size: 17px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .text h3 {
+    font-size: 30px;
+  }
+  .FloatingSection {
+    height: 35vh;
+  }
+  .swiperSlide p {
+    font-size: 17px;
+  }
+}
+@media only screen and (max-width: 430px) {
+  .BottomDivTest h1 {
+    font-size: 30px;
+  }
+  .text h3 {
+    font-size: 20px;
+  }
+  .swiperSlide p {
+    font-size: 15px;
+  }
+  .FloatingSection {
+    height: 25vh;
+  }
+}

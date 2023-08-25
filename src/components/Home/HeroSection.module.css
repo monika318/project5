@@ -1,5 +1,6 @@
 .HeroSectionDiv {
   margin-top: 100px;
+  overflow: hidden;
 }
 .swiper {
   width: 100%;
@@ -28,7 +29,7 @@
   justify-content: flex-start;
   align-items: center;
   text-align: left;
-  background-image: url(../../images/image121.png);
+  background-image: url(../../images/div1/image121.webp);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -83,7 +84,7 @@
   justify-content: flex-start;
   align-items: center;
   text-align: left;
-  background-image: url(../../images/image122.png);
+  background-image: url(../../images/image122.webp);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -93,7 +94,7 @@
   justify-content: flex-end;
   align-items: center;
   text-align: left;
-  background-image: url(../../images/image131.png);
+  background-image: url(../../images/image131.webp);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -121,7 +122,6 @@
   height: 100%;
   background-color: #008bba3d;
 }
-
 .overlay {
   position: absolute;
   bottom: 0;
@@ -133,7 +133,6 @@
   height: 100%;
   transition: 0.5s ease;
 }
-
 .overlayTwo {
   position: absolute;
   bottom: 0;
@@ -182,4 +181,70 @@
 .product:hover .productName,
 .product:hover .productPrice {
   color: white;
+}
+
+@media only screen and (max-width: 1330px) {
+  .Div1 {
+    background-image: url(../../images/div1/Div1respo.png);
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .productName p {
+    font-size: 25px;
+  }
+  .productPrice p {
+    font-size: 25px;
+  }
+  .product {
+    height: 350px;
+    width: 35%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .product {
+    height: 300px;
+    width: 40%;
+  }
+}
+@media only screen and (max-width: 680px) {
+  .HeroSectionDiv {
+    height: 100vh;
+  }
+  .Div1 {
+    background-image: url(../../images/div1/Div1respo3.png);
+  }
+  .productName p {
+    font-size: 20px;
+  }
+  .productPrice p {
+    font-size: 20px;
+  }
+  .product {
+    height: 250px;
+    width: 40%;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .productName p {
+    font-size: 15px;
+  }
+  .productPrice p {
+    font-size: 15px;
+  }
+  .product {
+    height: 200px;
+    width: 35%;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .productDiv {
+    flex-wrap: wrap;
+  }
+  .product {
+    width: 100%;
+  }
+  .product img {
+    object-fit: cover;
+  }
 }

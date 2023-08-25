@@ -98,3 +98,38 @@
 .ContactForm button:hover {
   background-color: black;
 }
+@media only screen and (max-width: 1030px) {
+  .ContactInfo {
+    flex-wrap: wrap;
+  }
+  .InnerContactInfo {
+    width: 40%;
+  }
+}
+@media only screen and (max-width: 625px) {
+  .InnerContactInfo {
+    width: 70%;
+  }
+  .gridItem {
+    grid-column: span 3;
+  }
+}
+@media only screen and (max-width: 380px) {
+  .InnerContactInfo p {
+    font-size: 15px;
+  }
+  .container h1 {
+    font-size: 40px;
+  }
+  .gridItem Input {
+    padding: 10px 10px;
+  }
+}
+@media only screen and (max-width: 310px) {
+  .InnerContactInfo p {
+    font-size: 10px;
+  }
+  .container h1 {
+    text-align: center;
+  }
+}

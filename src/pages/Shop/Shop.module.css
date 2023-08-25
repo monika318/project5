@@ -196,16 +196,81 @@
 .Pagination div {
   border: 1px solid #03383c;
   padding: 5px 20px;
-  color: #03383c;
+  background-color: #7e8865;
+  color: white;
+  cursor: pointer;
 }
 .Pagination button {
   border: 1px solid #03383c;
-  color: #03383c;
-  background-color: #7e886573;
+  color: white;
+  background-color: #7e8865;
+  transition: 1s all ease;
 }
-
+.Pagination button:hover {
+  border: 1px solid #03383c;
+  color: white;
+  background-color: black;
+}
 .Pagination button:disabled {
   color: #a0a0a0;
   background-color: #e0e0e0;
   cursor: not-allowed;
+}
+@media only screen and (max-width: 1230px) {
+  .EachProduct {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 885px) {
+  .EachProduct {
+    width: 50%;
+  }
+  .LeftSection {
+    display: none;
+  }
+  .RightSection {
+    width: 100%;
+  }
+  .EachProduct img {
+    width: 500px;
+  }
+  .SortDiv {
+    justify-content: center;
+    gap: 20px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .EachProduct {
+    width: 100%;
+  }
+  .SortDiv {
+    justify-content: center;
+    gap: 20px;
+  }
+  .SideCart {
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 505px) {
+  .Views {
+    display: none;
+  }
+  .SideCart {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 410px) {
+  .SideCart {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 340px) {
+  .SideCart {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 300px) {
+  .SideCart {
+    width: 100%;
+  }
 }

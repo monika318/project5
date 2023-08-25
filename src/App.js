@@ -39,7 +39,7 @@ const App = () => {
           <SideBar />
           <TopHeader />
           <Routes>
-            <Route path='/dashboard/Home' element={<AdminHome />} />
+            <Route path='/dashboard/' element={<AdminHome />} />
             <Route path='/dashboard/AccessDenied' element={<AdminAccessDenied />} />
             <Route path='/dashboard/Category' element={<AdminCategory />} />
             <Route path='/dashboard/Products' element={<AdminProduct />} />

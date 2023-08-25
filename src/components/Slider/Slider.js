@@ -17,7 +17,7 @@ const Slider = ({ slides, id }) => {
     const transitionDuration = 500;
 
     let itemInfo = PRODUCTS.find((product) => product.id === Number(id))
-    console.log(itemInfo)
+
     const slideStyles = {
         width: '100%',
         height: '100%',

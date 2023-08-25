@@ -60,7 +60,7 @@
   border: 1px solid black;
 }
 .DescriptionDiv {
-  width: 40%;
+  width: 50%;
   display: flex;
   flex-direction: column;
 }
@@ -132,7 +132,7 @@
 /* showcart */
 .model {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   top: 0;
   position: fixed;
   display: flex;
@@ -167,4 +167,29 @@
 .model.open .SideCart {
   right: 0%;
   transition: all 0.88s ease-in;
+}
+@media only screen and (max-width: 1050px) {
+  .SideCart {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .SideCart {
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 410px) {
+  .SideCart {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 340px) {
+  .SideCart {
+    width: 95%;
+  }
+}
+@media only screen and (max-width: 280px) {
+  .SideCart {
+    width: 100%;
+  }
 }

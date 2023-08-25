@@ -3,6 +3,9 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  /* box-shadow: 3px 3px 3px #aaaaaa47; */
+  padding: 10px 20px;
+  margin: 10px 0;
 }
 .cardBody {
   display: flex;
@@ -16,6 +19,19 @@
   width: 270px;
   margin-bottom: 1em;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ShopStyle {
+  height: 320px;
+  /* width: 100%; */
+  width: 270px;
+  margin-bottom: 1em;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .cardImage img {
   width: 100%;
@@ -25,6 +41,7 @@
   display: block;
   backface-visibility: hidden;
   z-index: 0;
+  margin: 0px 2px;
 }
 .overlay {
   position: absolute;
@@ -135,6 +152,7 @@
   width: 45%;
   display: flex;
   flex-direction: column;
+  gap: 10px;
 }
 .ProductButton {
   border: none;
@@ -144,6 +162,9 @@
   font-weight: bold;
   background-color: white;
   text-align: left;
+}
+.ProductButton:hover {
+  text-decoration: underline;
 }
 .ModalTextDiv h3 {
   font-size: 35px;
@@ -164,4 +185,67 @@
   margin: 2px 0px;
   background-color: whitesmoke;
   border: 1px solid black;
+}
+.CrossPrice {
+  text-decoration: line-through;
+  font-size: 18px;
+  margin: 0;
+}
+.CardAction button {
+  background-color: #7e8865;
+  color: white;
+  border: 1px solid #03383c;
+  padding: 5px 20px;
+}
+
+@media only screen and (max-width: 610px) {
+  .cardImage img {
+    width: 70%;
+  }
+  .cardBody p {
+    font-size: 20px;
+  }
+  .cardBody h2 {
+    font-size: 25px;
+  }
+}
+@media only screen and (max-width: 490px) {
+  .cardImage {
+    height: 250px;
+    width: 200px;
+  }
+  .cardBody p {
+    font-size: 16px;
+    margin: 1px;
+  }
+  .cardBody h2 {
+    font-size: 20px;
+  }
+  .cardImage {
+    margin-bottom: 0;
+  }
+  .card {
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 490px) {
+  .cardBody h2 {
+    font-size: 17px;
+  }
+  .cardBody p {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .cardImage {
+    height: 340px;
+    width: 250px;
+  }
+  .cardBody p {
+    font-size: 18px;
+    margin: 1px;
+  }
+  .cardBody h2 {
+    font-size: 23px;
+  }
 }

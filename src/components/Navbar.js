@@ -39,7 +39,6 @@ const Navbar = () => {
 
 
     const [dropdownVisible, setDropdownVisible] = useState(false);
-    const [dropdownHelp, setDropdownHelp] = useState(false);
     const [dropdownwho, setDropdownwho] = useState(false);
 
     const handleDropdownCclick = (e) => {
@@ -50,14 +49,7 @@ const Navbar = () => {
             e.target.classList.remove(styles.color);
         }
     };
-    const handleClickHelp = (e) => {
-        setDropdownHelp(!dropdownHelp);
-        if (dropdownHelp) {
-            e.target.classList.add(styles.color);
-        } else {
-            e.target.classList.remove(styles.color);
-        }
-    }
+
     const handleClickWho = (e) => {
         setDropdownwho(!dropdownwho);
         if (dropdownwho) {
@@ -68,7 +60,6 @@ const Navbar = () => {
     }
     let locationString = location.pathname.slice(1);
     const shouldShowNavbar = locationString.includes('dashboard');
-
 
     // const [NumberofCartItem, setNumberofCartItem] = useState(0);
     // const [storedKey, setStoredKey] = useState([]);
@@ -114,8 +105,14 @@ const Navbar = () => {
             {!shouldShowNavbar &&
                 < header >
                     <nav className={`${styles.topmenu} ${styles.fixed}`} >
-
                         <div className={styles.navbar}>
+                            <div>
+                                <IconContext.Provider value={{ color: "#03383c", size: "20px" }}>
+                                    <Link to="#" className={styles.menubars}>
+                                        <FaIcons.FaBars onClick={showSidebar} />
+                                    </Link>
+                                </IconContext.Provider>
+                            </div>
                             <div className={styles.logo}>
                                 {/* <NavLink to="/" ><img src={Logo} alt="logo" /></NavLink> */}
                                 <NavLink to="/" ><p>Groovy</p></NavLink>
@@ -141,9 +138,7 @@ const Navbar = () => {
 
                             <div className={styles.Icons}>
                                 <IconContext.Provider value={{ color: "#03383c", size: "20px" }}>
-                                    <Link to="#" className={styles.menubars}>
-                                        <FaIcons.FaBars onClick={showSidebar} />
-                                    </Link>
+
                                     {/* <Link to="/" className={styles.navitem} style={{ position: 'relative' }} ><FaIcons.FaRegHeart />
                                         <span className="position-absolute  translate-middle badge rounded-pill" style={{ backgroundColor: "#7e8865", color: '#d9dfd7', fontSize: '8px', top: '13%', right: '-80%' }}>
                                             0
@@ -172,23 +167,18 @@ const Navbar = () => {
                             </li>
                             <li>
                                 <div className={styles.listitem} onClick={handleClickWho}>
-                                    <span>Who we are </span>
-                                    <FaIcons.FaGreaterThan />
-                                </div>
-                                <div className={`${styles.dropdownCContent} ${dropdownwho ? styles.Aactive : ''}`}>
-                                    <ul>
-                                        <li className={styles.droplistitem}><Link to='/house-cleaning'>Our Story</Link></li>
-                                        <li className={styles.droplistitem}><Link to='/door-cleaning'>Our Team</Link> </li>
-                                        <li className={styles.droplistitem}> <Link to='/door-cleaning'>Our Mission</Link></li>
-                                    </ul>
+                                    <Link to='/' onClick={() => setSidebar(false)}>
+                                        <span>Home </span>
+                                    </Link>
                                 </div>
                             </li>
                             <li>
                                 <div className={styles.listitem} onClick={handleDropdownCclick} >
-                                    <span>Shop </span>
-                                    <FaIcons.FaGreaterThan />
+                                    <Link to='/shop' onClick={() => setSidebar(false)}>
+                                        <span>Shop </span>
+                                    </Link>
                                 </div>
-                                <div className={`${styles.dropdownCContent} ${dropdownVisible ? styles.Aactive : ''}`}>
+                                {/* <div className={`${styles.dropdownCContent} ${dropdownVisible ? styles.Aactive : ''}`}>
                                     <ul>
                                         <li className={styles.droplistitem}><Link to='/One-Off Cleaning Services'>One-Off Cleaning Services</Link></li>
                                         <li className={styles.droplistitem}><Link to='/Regular Cleaning Services'>Regular Cleaning Services</Link></li>
@@ -199,34 +189,23 @@ const Navbar = () => {
                                         <li className={styles.droplistitem}><Link to='/One-Off Cleaning Services'>Steam/Carpet Cleaning Services</Link></li>
                                         <li className={styles.droplistitem}><Link to='/One-Off Cleaning Services'>Glass Cleaning Services</Link></li>
                                     </ul>
-                                </div>
+                                </div> */}
                             </li>
                             <li>
                                 <div className={styles.listitem}>
-                                    <Link to='/'>
-                                        <span>Where we clean </span>
+                                    <Link to='/about' onClick={() => setSidebar(false)}>
+                                        <span>About </span>
                                     </Link>
                                 </div>
                             </li>
                             <li>
                                 <div className={styles.listitem}>
-                                    <Link to='/'>
-                                        <span>Jobs</span>
+                                    <Link to='/contact' onClick={() => setSidebar(false)}>
+                                        <span>Contact US</span>
                                     </Link>
                                 </div>
                             </li>
-                            <li>
-                                <div className={styles.listitem} onClick={handleClickHelp}>
-                                    <span>Help</span>
-                                    <FaIcons.FaGreaterThan />
-                                </div>
-                                <div className={`${styles.dropdownCContent} ${dropdownHelp ? styles.Aactive : ''}`}>
-                                    <ul>
-                                        <li className={styles.droplistitem}><Link to='/Contact Us'>Contact Us</Link></li>
-                                        <li className={styles.droplistitem}><Link to='/FAQ'>FAQ</Link></li>
-                                    </ul>
-                                </div>
-                            </li>
+
 
                             {/* {SidebarDate.map((item, index) => {
                                 return (
@@ -246,7 +225,7 @@ const Navbar = () => {
                             })} */}
                         </ul>
                     </nav>
-                </ header>
+                </ header >
             }
 
         </>

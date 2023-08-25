@@ -16,13 +16,13 @@ const Order = () => {
         // },
         headCells: {
             style: {
-                paddingLeft: '8px', // override the cell padding for head cells
+                paddingLeft: '6px', // override the cell padding for head cells
                 paddingRight: '2px',
             },
         },
         cells: {
             style: {
-                paddingLeft: '8px', // override the cell padding for data cells
+                paddingLeft: '6px', // override the cell padding for data cells
                 paddingRight: '2px',
             },
         },
@@ -83,19 +83,25 @@ const Order = () => {
             name: '#',
             selector: row => row.sn,
             sortable: true,
-            width: '5%',
+            width: '4%',
 
         },
         {
             name: 'Customer Name',
             selector: row => row.name,
             sortable: true,
-            minWidth: '150px'
+            minWidth: '130px'
+        },
+        {
+            name: 'SKU',
+            selector: row => row.sku,
+            width: '8%',
+            sortable: true,
         },
         {
             name: 'Quantity',
             selector: row => row.quantity,
-            width: '10%',
+            width: '8%',
             sortable: true,
             sortFunction: QuantitySort,
         },
@@ -114,7 +120,7 @@ const Order = () => {
         {
             name: 'Payment Method',
             selector: row => row.paymentMethod,
-            width: '13%'
+            width: '11%'
         },
         {
             name: 'Status',
@@ -147,6 +153,7 @@ const Order = () => {
         return (<>
             <div className={styles.Expandable}>
                 <p>Name : {data.name}</p>
+                <p>Product SKU : {data.sku}</p>
                 <p>Quantity : {data.quantity}</p>
                 <p>Total Price : {data.totalPrice}</p>
                 <p>Payment Status : {data.paymentStatus}</p>
@@ -163,6 +170,7 @@ const Order = () => {
             sn: '1',
             id: 1,
             name: 'Monika Shakya',
+            sku: 'KS93528TUT',
             quantity: '10',
             totalPrice: '1000',
             paymentStatus: 'Done',
@@ -174,6 +182,7 @@ const Order = () => {
             sn: '2',
             id: 2,
             name: 'Siddhu Khanal',
+            sku: 'KS93528TUT',
             quantity: '10',
             totalPrice: '800',
             paymentStatus: 'Done',
@@ -185,6 +194,7 @@ const Order = () => {
             sn: '3',
             id: 3,
             name: 'Achyut Rimal',
+            sku: 'KS93528TUT',
             quantity: '8',
             totalPrice: '1500',
             paymentStatus: 'Done',
@@ -196,6 +206,7 @@ const Order = () => {
             sn: '4',
             id: 4,
             name: 'Sagar K.C',
+            sku: 'KS93528TUT',
             quantity: '20',
             totalPrice: '5500',
             paymentStatus: 'Done',
@@ -207,6 +218,7 @@ const Order = () => {
             sn: '5',
             id: 5,
             name: 'Ajay Roy',
+            sku: 'KS93528TUT',
             quantity: '2',
             totalPrice: '500',
             paymentStatus: 'Done',
@@ -218,6 +230,7 @@ const Order = () => {
             sn: '6',
             id: 6,
             name: 'Tulashi Khatri',
+            sku: 'KS93528TUT',
             quantity: '12',
             totalPrice: '5900',
             paymentStatus: 'Done',

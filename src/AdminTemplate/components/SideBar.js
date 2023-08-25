@@ -27,8 +27,8 @@ const SideBar = () => {
                     <div className={styles.LinksBody}>
                         <h6>Main Links</h6>
                         <IconContext.Provider value={{ size: '20px', color: '#03383c' }}>
-                            <Link to='/dashboard/Home'>
-                                <div className={pathname === 'Home' ? `${styles.DashboardItems} ${styles.active}` : styles.DashboardItems} >
+                            <Link to='/dashboard/'>
+                                <div className={pathname === '' ? `${styles.DashboardItems} ${styles.active}` : styles.DashboardItems} >
                                     <AiIcons.AiFillHome />
                                     <h4>Home</h4>
                                 </div>

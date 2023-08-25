@@ -13,35 +13,31 @@
   z-index: 998;
 }
 
+/* Responsive Navbar */
 .menubars {
-  /* margin-left: 1rem; */
+  margin-left: 1rem;
   font-size: 2rem;
   background: none;
-  /* margin-right: 4rem; */
 }
-
 .navmenu {
   background-color: whitesmoke;
-  /* background-color: transparent; */
-  /* width: 250px; */
-  width: 80%;
-  height: 100vh;
+  width: 50%;
+  height: 100%;
   display: flex;
   justify-content: center;
   position: fixed;
   top: 0;
-  /* left: -100%; */
-  right: -100%;
+  left: -100%;
   transition: 850ms;
   z-index: 998;
 }
-
 .navmenu.active {
-  /* left: 0; */
-  right: 0;
+  left: 0;
   transition: 350ms;
 }
-
+.listitem:hover {
+  background-color: #7e886565;
+}
 .navText {
   display: flex;
   flex-direction: column;
@@ -279,9 +275,25 @@ span {
 .navitem {
   border-bottom: 1px solid transparent;
 }
-.navitem:hover {
-  border-bottom: 2px solid #03383c;
+.text {
+  margin-top: 15px;
 }
+.text a::after {
+  content: "";
+  width: 0%;
+  height: 3px;
+  display: block;
+  margin-bottom: 10px;
+  background-color: #7e8865;
+  border-radius: 5px;
+}
+.text a:hover::after {
+  width: 100%;
+  transition: all 0.5s;
+}
+/* .navitem:hover {
+  border-bottom: 2px solid #03383c;
+} */
 
 /* .text {
   position: relative;
@@ -300,7 +312,7 @@ span {
 /*Cart  */
 .model {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   top: 0;
   position: fixed;
   display: flex;
@@ -346,5 +358,30 @@ span {
   }
   .text {
     display: none;
+  }
+}
+@media only screen and (max-width: 1050px) {
+  .SideCart {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .SideCart {
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 410px) {
+  .SideCart {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 340px) {
+  .SideCart {
+    width: 95%;
+  }
+}
+@media only screen and (max-width: 280px) {
+  .SideCart {
+    width: 100%;
   }
 }
